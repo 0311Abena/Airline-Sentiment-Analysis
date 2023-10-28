@@ -1,4 +1,3 @@
-import streamlit as st
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.text import Tokenizer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
@@ -26,7 +25,7 @@ def preprocess_text(text):
     padded_tokens = pad_sequences(tokens, maxlen = 100)
     return padded_tokens[0]
 
-@app.route("/predict/", methods = ["GET", "POST"])
+@app.route("/", methods = ["GET", "POST"])
 def predict():
     sentiment = ""
 
@@ -55,4 +54,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', port=5001)
