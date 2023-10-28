@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Virgin Airline Sentiment Analysis App</title>
+
+</head>
+<body>
+    <h1>Virgin Airline Sentiment Analysis App</h1>
+    <form method = "POST">
+        <label for = "user_input"><b>Enter text for sentiment analysis</b></label><br><br>
+        <textarea id = "user_input", name = "user_input", rows = "4", cols="50"></textarea><br><br>
+        <button type="submit">Predict Sentiment</button>
+
+    </form>
+    {% if sentiment %}
+    <h2>Sentiment: {{ sentiment }}</h2>
+    {% endif %}
+</body>
+
+
+</html>

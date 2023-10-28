@@ -37,9 +37,9 @@ if st.button("Predict Sentiment"):
     # sentiment = "Negative" if prediction[0][0]> 0.5 else "Positive"
 
     # Map predicted class index to sentiment label
-    sentiments = ["Negative", "Neutral", "Positive"]
+    sentiment = ["Negative", "Neutral", "Positive"]
     predicted_class_index = np.argmax(prediction)
-    sentiment = sentiments[predicted_class_index]
+    sentiment = sentiment[predicted_class_index]
 
     # Display the sentiment
     st.write(f"## Sentiment: {sentiment}")
